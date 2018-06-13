@@ -1,0 +1,58 @@
+<div class="main-header">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h2 class="main-title">Jogadores</h2>
+        <!-- <a href="#" class="btn waves-light waves-effect bs-main-action-btn right"><i class="material-icons left">add</i> <span class="hide-on-med-and-down">Adicionar Oficina</span></a> -->
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="main-content" data-ng-init="loadController()">
+  <div class="container">
+    <div class="row">
+      <ul infinite-scroll="loadWss()" infinite-scroll-disabled='isLoading || !nextPageToken' class="collection with-header bs-default-listing bs-workshops-list">
+        <!-- <li class="collection-header">
+          <div class="row bs-main-filter"> -->
+            <!-- <div class="col s2">
+              <i class="material-icons">filter_list</i>
+            </div> -->
+            <!-- <div class="col s6 offset-s4 m3 offset-m7 right-align">
+              <i class="material-icons">search</i>
+            </div> -->
+            <!-- <div class="input-group col s6 offset-s6 m3 offset-m9 right-align">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div> -->
+          <!-- </div>
+        </li> -->
+        <li class="collection-item pointer" ng-repeat="ws in wss" ng-click="openView(ws)">
+          <div class="row">
+            <span class="col s12 m4 bs-player-topic">{{ws.topic}}</span>
+            <span class="col s6 m2 bs-player-name">
+              <label>Nome Completo</label>
+              <p>
+                <a href="/jogador/{{ws.user.name}}">
+                  {{ws.user.name}}
+                </a></p>
+            </span>
+            <span class="col s6 m2 bs-team-unit">
+              <label>Nome do Time</label>
+              <p>
+                <a href="/player/{{ws.country.name}}">{{ws.team.name}}</a>
+                <a target="_blank" href="{{mapLink(ws.country.name)}}"><i class="mdi mdi-map"></i></a>
+              </p>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

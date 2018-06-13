@@ -1,0 +1,40 @@
+<div class="main-header">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h2 class="main-title">{{soWhat}} Times</h2>
+        <a href="#" class="btn-flat waves-light waves-effect blue-text bs-main-action-btn right" ng-click="goBack()">
+          <i class="material-icons left">keyboard_arrow_left</i>
+          <span class="hide-on-med-and-down">Voltar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="main-content" data-ng-init="loadController()">
+  <div class="container">
+    <div class="row bs-default-card-form">
+      <div class="col s12 m8 offset-m2 card">
+        <div class="card-content">
+          <div class="row">
+            <div class="input-field col s12 m8">
+              <input id="mant_name" type="text" class="validate" ng-model="maintainer.name" ng-class="{valid: maintainer.name}">
+              <label for="mant_name">Nome Completo</label>
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <button class="btn waves-effect waves-light blue right" type="submit" ng-if="profile.access.maintainer.insert || profile.access.maintainer.update" name="action" ng-click="saveMaintainer()">
+            Salvar
+          </button>
+          <a href="#" class="btn-flat waves-effect waves-light red-text center-align right" ng-click="goBack()">
+            Cancelar
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

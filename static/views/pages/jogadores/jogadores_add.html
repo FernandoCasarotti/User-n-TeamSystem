@@ -1,0 +1,40 @@
+<div class="main-header">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h2 class="main-title">Novo Jogador</h2>
+        <a href="#" class="btn-flat waves-light waves-effect blue-text bs-main-action-btn right"><i class="material-icons left">keyboard_arrow_left</i>
+          <span class="hide-on-med-and-down">Voltar</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="main-content" data-ng-init="loadController()">
+  <div class="container">
+    <div class="row bs-default-card-form">
+      <form id="ws_form">
+        <div class="col s12 m8 offset-m2 card">
+          <div class="card-content">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="ws_unit" name="ws_unit" type="text" disabled ng-model="unit.name">
+                <label for="ws_unit">Nome Completo</label>
+              </div>
+              <div class="input-field col s12 m9">
+                <input id="ws_topic" name="ws_topic" type="text" ng-model="ws.topic">
+                <label for="ws_topic">Nome do Time</label>
+              </div>
+            </div>
+            <div class="card-action">
+              <button class="btn waves-effect waves-light blue right" type="submit" name="action">Salvar</button>
+              <a href="#" class="btn-flat waves-effect waves-light red-text center-align right">Cancelar</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
